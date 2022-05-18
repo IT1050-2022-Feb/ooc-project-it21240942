@@ -1,7 +1,8 @@
 //IT21240942
 #include<iostream>
+#inclufde<cstring>
 #include"Customer.h"
-
+using namespace std;
 //customer implementation 
    Customer::Customer()
     {
