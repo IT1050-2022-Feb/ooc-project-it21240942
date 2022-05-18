@@ -1,0 +1,104 @@
+//Dhananjana B.K.T_IT21240706
+/*-----------Report----------*/
+//Report.h
+class Report
+{
+private:
+    int reportID;
+    char reportName[50];
+public:
+    Report();
+    Report(int rID, const char rName[]);
+    void addReportAdmin();
+    void displayReportDetails();
+    ~Report();
+};
+
+//Report Implementation
+Report :: Report()
+{
+
+}
+Report :: Report(int rID, const char rName[])
+{
+
+}
+void Report :: addReportAdmin() 
+{
+
+}
+void Report :: displayReportDetails()
+{
+
+}
+Report :: ~Report()
+{
+
+}
+
+/*-----------Admin----------*/
+//Admin.h
+class Admin
+{
+private:
+    int adminID;
+    char aUsername[50];
+    char aEmail[30];
+    int aPhoneNo;
+    Report * rep;
+    Book* bk;
+    Customer * cust;
+    Publisher *pub;
+    Inquiry* inq;
+    Oder * odr;
+
+public:
+    Admin();
+    void adminDetails(int aID, const char aName[], const char email[], int number);
+    void approveBooks();
+    void viewInquiry();
+    void removeExistingBooks();
+    void displayAdminDetails();
+    void deleteUserAccount();
+    void displayApproveBook();
+    ~Admin();
+};
+
+
+//Admin Implementation
+Admin :: Admin()
+{
+
+}
+void Admin::adminDetails(int aID, const char aName[], const char email[], int number)
+{
+
+}
+void Admin :: approveBooks()
+{
+
+}
+void Admin :: viewInquiry()
+{
+
+}
+void Admin :: removeExistingBooks()
+{
+
+}
+void Admin::displayAdminDetails()
+{
+
+}
+void Admin :: deleteUserAccount()
+{
+
+}
+void Admin :: displayApproveBook()
+{
+
+}
+Admin :: ~Admin()
+{
+
+}
