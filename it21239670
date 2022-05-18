@@ -1,0 +1,98 @@
+//it21239670 Bandara D.M.H.G.I.G
+//payment.h
+class Payment {
+private:
+    int payID;
+    char payType[20];
+    double payAmount;
+
+
+public:
+    Payment();
+    Payment(int pID, const char ppayType[], double ppayAmount);
+    void checkPayment();
+    void confirmPayment();
+    void displayPaymentDetails();
+    ~Payment();
+};
+// payment implementation
+Payment::Payment()
+{
+    payID = 0;
+    strcpy(payType, "");
+    payAmount = 0;
+}
+Payment::Payment(int pID, const char ppayType[], double ppayAmount)
+{
+    payID = pID;
+    strcpy(payType, ppayType);
+    payAmount = ppayAmount;
+}
+
+void Payment::checkPayment()
+{
+}
+void Payment::confirmPayment()
+{
+}
+void Payment::displayPaymentDetails()
+{
+}
+Payment::~Payment()
+
+{
+}
+//order.h
+class Order
+{
+private:
+
+    int orderID;
+    int orderQty;
+    double price;
+    
+
+    Payment* pymnt[2];
+
+public:
+
+    Order();
+    Order(double num1, double num2);
+    void statusOder();
+    void calculateBookPrice();
+    int getOrderID();
+    void displayOderDetails();
+    ~Order();
+};
+// order impelementation
+
+ Order::Order()
+{
+    
+}
+ Order::Order(double num1, double num2)
+ {
+     pymnt[0] = new Payment[1500];
+     pymnt[1] = new Payment[750];
+ }
+void Order::statusOder()
+{
+}
+void Order::calculateBookPrice()
+{
+}
+void Order::displayOderDetails()
+{
+}
+int Order::getOrderID()
+{
+    return orderID;
+}
+Order::~Order()
+{
+    cout << "Delete order details " << endl;
+    {
+        delete pymnt[0];
+        delete pymnt[1];
+    }
+}
